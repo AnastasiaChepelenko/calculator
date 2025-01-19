@@ -32,8 +32,8 @@ public class Calculator {
                 if (a < 1 | a > 10 | b < 1 | b > 10) {
                     throw new Exception("Вводите цифры от 1 до 10");
                 }
-            } catch (Exception e) {
-                throw new Exception("Один из операндов не является числом. Проверьте пробелы в выражении");
+            } catch (NumberFormatException e) {
+                throw new NumberFormatException("Один из операндов не является числом. Проверьте пробелы в выражении");
             }
 
             int result;
